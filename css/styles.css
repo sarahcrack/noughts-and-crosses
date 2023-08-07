@@ -30,7 +30,20 @@ body {
   grid-gap: 5px;
 }
 
-.grid div {
+.turn {
   background-color: red;
-  margin: 10px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.actions {
+  background-color: purple;
+}
+
+.square {
+  background-color: green;
+}
+
+.score {
+  background-color: #f2b147;
 }
