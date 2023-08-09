@@ -6,6 +6,8 @@
   --turquoise: #3cc4bf;
   --yellow: #f2b147;
   --light-grey: #d3d3d3;
+  --barbie-pink: #e0218a;
+  --light-pink: #facde5;
 }
 
 * {
@@ -20,7 +22,22 @@
 html,
 body {
   height: 100%;
-  background-color: var(--dark-grey);
+  background-color: var(--barbie-pink);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 90px 20px;
+}
+
+h1 {
+  color: var(--turquoise);
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .grid {
@@ -41,9 +58,45 @@ body {
 }
 
 .square {
-  background-color: green;
+  background-color: var(--light-pink);
 }
 
 .score {
   background-color: #f2b147;
+}
+
+footer {
+  color: antiquewhite;
+  margin-top: 50px;
+}
+
+footer p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+footer a {
+  color: #3cc4bf;
+  text-decoration: none;
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+  .grid {
+    width: 490px;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: 60px repeat(3, 150px) 60px;
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+  }
+
+  footer {
+    margin-top: 60px;
+    font-size: 1.5rem;
+  }
 }
